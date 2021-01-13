@@ -1,0 +1,21 @@
+.signIn {
+  width: 30vw;
+  margin: 2rem 5rem 6rem;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  border: 1px solid rgba(204, 204, 204, 0.541);
+  padding: 2rem;
+
+  & h2 {
+    font-size: 25px;
+    color: rgb(4, 0, 54);
+    padding-bottom: 1rem;
+    letter-spacing: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  }
+
+  & span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
