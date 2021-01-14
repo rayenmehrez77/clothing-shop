@@ -5,19 +5,20 @@
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: black;
-  color: white;
+  font-size: 12px;
+  background-color: #fffffe;
+  border: 1px solid rgb(22, 22, 22);
+  color: #000;
+  font-weight: 800;
+  outline: none;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   border-radius: 8px;
-  border: none;
   cursor: pointer;
 
   &:hover {
-    background-color: white;
+    background-color: #beab7e;
     color: black;
-    border: 1px solid black;
   }
   &.google-sign {
     background-color: rgb(0, 99, 212);
@@ -25,9 +26,6 @@
     border: none;
     outline: none;
     margin-left: 5px;
-    // display: flex;
-    // align-items: center;
-
     &:hover {
       background-color: rgb(0, 76, 163);
     }
