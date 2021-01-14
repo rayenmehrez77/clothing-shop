@@ -6,6 +6,7 @@ import Shop from "./pages/Shop/Shop";
 import Header from "./Components/Header/Header";
 import { auth } from "./firebase/firebase.utils";
 import SignInSignUp from "./pages/SignIn-SignUp/SignIn-SignUp";
+import Footer from "./Components/Footer/Footer";
 
 class App extends React.Component {
   constructor() {
@@ -43,5 +44,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
