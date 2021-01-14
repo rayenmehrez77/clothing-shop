@@ -3,7 +3,6 @@ import "./SignIn.scss";
 import FormInput from "../FormInput/FormInput";
 import CustomButton from "../CustomButton/CustomButton";
 import { signInWithGoogle } from "../../firebase/firebase.utils";
-import { ReactComponent as GoogleLogo } from "../../assets/search.svg";
 
 class SignIn extends Component {
   constructor(props) {
@@ -66,7 +65,3 @@ class SignIn extends Component {
 }
 
 export default SignIn;
-
-{
-  /* <GoogleLogo className="google-logo" /> Sign In with Google */
-}
