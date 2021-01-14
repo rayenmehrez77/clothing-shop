@@ -10,10 +10,20 @@
     align-items: center;
     justify-content: flex-end;
 
+    & .sign-in,
+    & .sign-out {
+      background-color: #f9bc60;
+      color: #001e1d;
+      border-radius: 30px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+
     & .option {
       margin-right: 2rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
       color: rgb(5, 0, 36);
+      cursor: pointer;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.5 ease-in;

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./SignIn.scss";
 import FormInput from "../FormInput/FormInput";
 import CustomButton from "../CustomButton/CustomButton";
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+import { ReactComponent as GoogleLogo } from "../../assets/search.svg";
 
 class SignIn extends Component {
   constructor(props) {
@@ -49,9 +51,14 @@ class SignIn extends Component {
             label="Password"
             required
           />
-          <CustomButton type="Submit" name="submit">
-            Sign In
-          </CustomButton>
+          <div className="buttons">
+            <CustomButton type="Submit" name="submit">
+              Sign In
+            </CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign In with Google
+            </CustomButton>
+          </div>
         </form>
       </div>
     );
@@ -59,3 +66,7 @@ class SignIn extends Component {
 }
 
 export default SignIn;
+
+{
+  /* <GoogleLogo className="google-logo" /> Sign In with Google */
+}

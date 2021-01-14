@@ -1,5 +1,5 @@
 .signIn {
-  width: 30vw;
+  width: 30rem;
   margin: 2rem 5rem 6rem;
   border-radius: 8px;
   background-color: #f7f7f7;
@@ -17,5 +17,10 @@
   & span {
     font-size: 18px;
     font-weight: 600;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
   }
 }
