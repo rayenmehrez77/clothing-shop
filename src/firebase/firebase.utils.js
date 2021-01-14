@@ -2,7 +2,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
-const firebaseConfig = {
+const config = {
   apiKey: "AIzaSyDMHaEJcV33KAPrQISjcNt47NK8WCHkdWk",
   authDomain: "crwn-clothing-c09ed.firebaseapp.com",
   projectId: "crwn-clothing-c09ed",
@@ -13,7 +13,7 @@ const firebaseConfig = {
 };
 
 // Initialize the app
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(config);
 
 // Exporting the authentication and the database (firestore)
 export const auth = firebase.auth();

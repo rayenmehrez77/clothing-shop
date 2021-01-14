@@ -1,9 +1,29 @@
 .header {
   padding: 1rem 6rem;
   display: flex;
-  height: 7rem;
+  height: 4.5rem;
   align-items: center;
   justify-content: space-between;
+  background-color: #1b2d45;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+
+  & .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  & .logo {
+    width: 3rem;
+    margin-right: 0.5rem;
+  }
+
+  & .title {
+    color: #fff;
+  }
 
   & .options {
     display: flex;
@@ -22,14 +42,15 @@
     & .option {
       margin-right: 2rem;
       font-size: 1rem;
-      color: rgb(5, 0, 36);
+      color: #fff;
       cursor: pointer;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.5 ease-in;
+      transition: all 0.2s ease-in;
+
       &:hover {
-        text-decoration: underline;
-        color: rgb(11, 0, 158);
+        color: #00ebc7;
+        transform: scale(1.06);
       }
     }
   }

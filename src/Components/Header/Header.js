@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../../assets/crown.svg";
+import { ReactComponent as Logo } from "../../assets/online-shopping.svg";
 import { auth } from "../../firebase/firebase.utils";
 
 function Header({ currentUser }) {
@@ -9,6 +9,7 @@ function Header({ currentUser }) {
     <div className="header">
       <Link className="logo-container" to="/">
         <Logo className="logo" title="logo" />
+        <span className="title">CRWN CLOTHING</span>
       </Link>
       <div className="options">
         <Link to="/shop" className="option">
