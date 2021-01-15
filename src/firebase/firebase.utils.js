@@ -34,9 +34,9 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     } catch (error) {
       console.log("Error creating user", error.message);
     }
-
-    return userRef;
   }
+
+  return userRef;
 };
 
 // Initialize the app
