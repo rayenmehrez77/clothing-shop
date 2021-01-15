@@ -43,11 +43,17 @@ class App extends React.Component {
   }
 
   render() {
+    const { currentUser } = this.state;
+
     return (
       <>
-        <Header currentUser={this.state.currentUser} />
+        <Header currentUser={currentUser} />
         <Switch>
-          <Route exact path="/" component={Homepage} />
+          <Route
+            exact
+            path="/"
+            component={() => <Homepage currentUser={currentUser} />}
+          />
           <Route exact path="/shop" component={Shop} />
           <Route exact path="/SignIn" component={SignInSignUp} />
         </Switch>
