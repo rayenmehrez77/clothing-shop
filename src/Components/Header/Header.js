@@ -31,6 +31,13 @@ function Header({ currentUser, hidden }) {
           </Link>
         )}
         <CardIcon />
+        {currentUser ? (
+          <img
+            className="header__imgProfile"
+            src={currentUser.photoURL}
+            alt="profile picture"
+          />
+        ) : null}
       </div>
       {hidden ? null : <CardDropdown />}
     </div>
