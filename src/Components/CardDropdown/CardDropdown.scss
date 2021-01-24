@@ -1,5 +1,7 @@
 .cart-dropdown {
   position: absolute;
+  top: 72px;
+  right: 60px;
   width: 246px;
   height: 334px;
   display: -webkit-flex;
@@ -9,8 +11,6 @@
   padding: 9px;
   border: 1px solid #948b8b;
   background-color: white;
-  top: 72px;
-  right: 60px;
   z-index: 5;
   border-radius: 10px;
 
