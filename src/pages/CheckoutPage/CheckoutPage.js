@@ -7,7 +7,6 @@ import {
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import CheckoutItem from "../../Components/Checkout-item/Checkout-item";
-import { RemoveItem } from "../../redux/cart/cart.actions";
 
 function CheckoutPage({ cartItems, total }) {
   return (
