@@ -1,4 +1,6 @@
-.card-icon {
+import styled from "styled-components";
+
+export const CartIconContainer = styled.div`
   width: 60px;
   height: 60px;
   position: relative;
@@ -19,4 +21,4 @@
     color: rgb(0, 0, 0);
     bottom: 17px;
   }
-}
+`;

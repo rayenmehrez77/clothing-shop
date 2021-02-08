@@ -5,15 +5,15 @@ import {
   clearItemFromCart,
   RemoveItem,
 } from "../../redux/cart/cart.actions";
-import "./Checkout-item.scss";
+import { CheckoutContainer, ImageContainer } from "./CheckoutItem.styles";
 
 function CheckoutItem({ cartItem, clearItem, addItem, removeItem }) {
   const { name, price, imageUrl, quantity } = cartItem;
   return (
-    <div className="checkout-item">
-      <div className="image-container">
+    <CheckoutContainer>
+      <ImageContainer>
         <img src={imageUrl} alt="item" />
-      </div>
+      </ImageContainer>
       <span className="name">{name}</span>
       <span className="quantity">
         <div className="arrow" onClick={() => removeItem(cartItem)}>
@@ -28,7 +28,7 @@ function CheckoutItem({ cartItem, clearItem, addItem, removeItem }) {
       <span className="remove" onClick={() => clearItem(cartItem)}>
         &#10006;
       </span>
-    </div>
+    </CheckoutContainer>
   );
 }
 

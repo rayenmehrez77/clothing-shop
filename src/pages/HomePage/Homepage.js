@@ -1,18 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
 import Directory from "../../Components/Directory/Directory";
-import "./HomePage.scss";
+import { HomePageContainer, UsernameHeading } from "./HomPage.styles";
 
 const Homepage = ({ currentUser }) => {
   return (
-    <div className="homepage">
+    <HomePageContainer>
       {currentUser ? (
-        <h2 className="homepage__username">
+        <UsernameHeading>
           Welcome back, {currentUser.displayName.toUpperCase().split(" ")[0]}
-        </h2>
+        </UsernameHeading>
       ) : null}
       <Directory />
-    </div>
+    </HomePageContainer>
   );
 };
 

@@ -4,15 +4,16 @@ import "./CollectionPage.scss";
 import { connect } from "react-redux";
 import CollectionItem from "../../Components/CollectionPreview/Collection-item";
 
-function CollectionPage({ collections, match }) {
+function CollectionPage({ collections }) {
+  // Collections object takes time to come back because is async so we need to add withSpinner to load the page before it come back
+
   const { title, items } = collections;
-  console.log(collections, match);
   return (
     <div className="collection-page">
       <h1>{title}</h1>
       <div className="items">
         {items.map((item) => {
-          return <CollectionItem item={item.id} item={item} />;
+          return <CollectionItem key={item.id} item={item} />;
         })}
       </div>
     </div>

@@ -1,4 +1,6 @@
-.cart-dropdown {
+import styled from "styled-components";
+
+export const CardDropdownContainer = styled.div`
   position: absolute;
   top: 72px;
   right: 60px;
@@ -14,18 +16,18 @@
   z-index: 5;
   border-radius: 10px;
 
-  .cart-items {
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
-  }
-
   button {
     margin-top: auto;
   }
+`;
 
-  .empty-cart {
-    margin: 30px auto;
-  }
-}
+export const CartItemsContainer = styled.div`
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+`;
+
+export const EmptyCard = styled.span`
+  margin: 30px auto;
+`;

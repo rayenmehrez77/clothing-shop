@@ -1,4 +1,22 @@
-.header {
+import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
+
+export const Option = css`
+  margin-right: 2rem;
+  font-size: 1rem;
+  color: rgb(0, 2, 31);
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    color: #01339e;
+    transform: scale(1.06);
+  }
+`;
+
+export const HeaderContainer = styled.div`
   padding: 1rem 6rem;
   display: flex;
   height: 4.5rem;
@@ -12,57 +30,46 @@
   left: 0;
   width: 100%;
   z-index: 99;
+`;
 
-  & .logo-container {
-    display: flex;
-    align-items: center;
-  }
+export const LogoContainer = styled(Link)`
+  display: flex;
+  align-items: center;
 
-  & .logo {
+  .logo {
     width: 3rem;
     margin-right: 0.5rem;
     height: 100%;
     object-fit: contain;
   }
 
-  & .title {
+  .title {
     color: #00214d;
   }
+`;
 
-  & .options {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+export const OptionsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
 
-    & .sign-in,
-    & .sign-out {
-      background-color: #002242;
-      color: #ffffff;
-      border-radius: 30px;
-      padding: 8px 15px;
-      cursor: pointer;
-    }
+export const OptionLink = styled(Link)`
+  ${Option}
+`;
 
-    & .option {
-      margin-right: 2rem;
-      font-size: 1rem;
-      color: rgb(0, 2, 31);
-      cursor: pointer;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease-in;
+export const Sign = css`
+  background-color: #002242;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 8px 15px;
+  cursor: pointer;
+`;
 
-      &:hover {
-        color: #01339e;
-        transform: scale(1.06);
-      }
-    }
-  }
+export const SignUpDiv = styled.div`
+  ${Sign}
+`;
 
-  &__imgProfile {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-}
+export const SignInDiv = styled(Link)`
+  ${Sign}
+`;
