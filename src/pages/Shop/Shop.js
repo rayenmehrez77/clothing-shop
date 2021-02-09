@@ -23,11 +23,24 @@ class Shop extends React.Component {
     const { updateCollections } = this.props;
     const collectionRef = firestore.collection("collections");
 
-    collectionRef.onSnapshot(async (snapShot) => {
+    // ***** Method 1: Regular promise ****
+    collectionRef.get().then((snapShot) => {
       const collectionMap = convertCollectionsSnapshotToMap(snapShot);
       updateCollections(collectionMap);
       this.setState({ loading: false });
     });
+    // ***** Method2: Observable *****
+    // collectionRef.onSnapshot(async (snapShot) => {
+    //   const collectionMap = convertCollectionsSnapshotToMap(snapShot);
+    //   updateCollections(collectionMap);
+    //   this.setState({ loading: false });
+    // });
+    // ***** Method3: Fetching from firebase API ************
+    // fetch(
+    //   "https://firestore.googleapis.com/v1/projects/crwn-clothing-c09ed/databases/(default)/documents/collections"
+    // )
+    //   .then((response) => response.json())
+    //   .then((collections) => console.log(collections));
   }
 
   render() {
